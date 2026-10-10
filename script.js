@@ -57,3 +57,9 @@ form.addEventListener("submit", (event) => {
   input.value = "";
   renderTasks();
 });
+const clearAllButton = document.querySelector("#clear-all");
+
+clearAllButton.addEventListener("click", () => {
+  tasks = [];
+  renderTasks();
+});
