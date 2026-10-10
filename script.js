@@ -2,6 +2,7 @@ const form = document.querySelector("#todo-form");
 const input = document.querySelector("#todo-input");
 const list = document.querySelector("#todo-list");
 const count = document.querySelector("#task-count");
+const remainingCount = document.querySelector("#remaining-count");
 
 let tasks = [];
 
@@ -40,6 +41,10 @@ function renderTasks() {
   });
 
   count.textContent = `Tasks: ${tasks.length}`;
+
+  const remainingTasks = tasks.filter((task) => !task.completed).length;
+
+  remainingCount.textContent = `Remaining: ${remainingTasks}`;
 }
 
 form.addEventListener("submit", (event) => {
