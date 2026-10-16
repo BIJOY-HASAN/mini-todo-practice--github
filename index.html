@@ -1,25 +1,38 @@
-<!doctype html>
+
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>My Todo Application</title>
+  <title>Task Manager App</title>
 
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
-    <div class="container">
-      <h1>My Task Manager</h1>
-      <form id="todo-form">
-        <input id="todo-input" type="text" placeholder="Enter a task" />
-        <button type="submit">Add Task</button>
-      </form>
-      <p id="task-count">Tasks: 0</p>
-      <p id="remaining-count">Remaining: 0</p>
-      <button id="clear-all">Clear All Tasks</button>
-      <ul id="todo-list"></ul>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>My Task Manager</h1>
+
+    <form id="todo-form">
+      <input id="todo-input" type="text" placeholder="Enter a task">
+      <button type="submit">Add Task</button>
+    </form>
+
+    <p id="task-count">Tasks: 0</p>
+    <p id="remaining-count">Remaining: 0</p>
+
+    <div class="filters">
+      <button type="button" class="filter-btn" data-filter="all">All</button>
+      <button type="button" class="filter-btn" data-filter="active">Active</button>
+      <button type="button" class="filter-btn" data-filter="completed">Completed</button>
     </div>
-    <script src="script.js"></script>
-  </body>
+
+    <br>
+
+    <button id="clear-all">Clear All Tasks</button>
+    <ul id="todo-list"></ul>
+  </div>
+
+  <script src="script.js"></script>
+</body>
 </html>
